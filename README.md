@@ -1,7 +1,8 @@
 
 # SP51 Gen5 PHEV pack: how to make the contactors close (bench guide)
 
-<img width="2304" height="4096" alt="SP51_plate" src="https://github.com/user-attachments/assets/ec4931dc-685e-4973-af20-065b7228a8b7" />
+<img width="4096" height="2304" alt="SP51_on" src="https://github.com/user-attachments/assets/58129079-2fe0-412a-9179-df68cd6ab25a" />
+
 
 
 
