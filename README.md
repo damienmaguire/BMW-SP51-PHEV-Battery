@@ -1,4 +1,8 @@
+
 # SP51 Gen5 PHEV pack: how to make the contactors close (bench guide)
+
+<img width="2304" height="4096" alt="SP51_plate" src="https://github.com/user-attachments/assets/361c5a3d-8c9c-4262-ba01-c5d468c7d53f" />
+
 
 **Pack:** BMW SP51 Gen5 PHEV HV battery, SME = Preh EA443 AS4 (SWFL 00003e6f), owned unit.
 **Goal:** close the main contactors from a bench CAN source (SavvyCAN, SocketCAN or ZombieVerter), hold them closed, and open them again cleanly.
