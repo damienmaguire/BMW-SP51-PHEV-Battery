@@ -7,8 +7,14 @@
 
 
 **Pack:** BMW SP51 Gen5 PHEV HV battery, SME = Preh EA443 AS4 (SWFL 00003e6f), owned unit.
+
+
 **Goal:** close the main contactors from a bench CAN source (SavvyCAN, SocketCAN or ZombieVerter), hold them closed, and open them again cleanly.
+
+
 **Status (2026-11-03):** closed **7 times** with the v4 playback (run 1, run 3, loop 3 ×4, wake-window test). Run 2 failed because HVIL was open. Wake failures are now explained by a **CAN-wake vs LV-wake** effect (§3a): the SME can be LV-awake but CAN-asleep, and sometimes only a 12 V power cycle fixes it. **v6 failed (run 1): its 2 s silent gaps latched COM off after the pack had woken — use v7 (continuous traffic), never pause the bus.**
+
+
 **Companion files:**
 - `analysis/sp51.dbc`: all known messages and signals.
 - `analysis/sp51_close_v4_result.md`: run-by-run analysis.
