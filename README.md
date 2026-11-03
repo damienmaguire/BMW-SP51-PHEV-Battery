@@ -84,31 +84,9 @@ cansend can0 10B#CD01FC                    # single test frame (0x10B OPEN, aliv
 
 **Always start logging before you apply 12 V, and keep it running through failed attempts too.** The run-3 log captured only the successful attempt, so we can't yet say why the earlier ones failed (§9).
 
----
 
-## 2. HV safety
 
-- **Once closed, the HV output terminals carry the full pack voltage: about 380 V DC** (380.8 V at about 19 % SOC) [CONFIRMED SP51 0x112 U_Pack]. This is lethal. Treat the output as live whenever 12 V is on and frames are running.
-- The pack output is **floating** (isolated from chassis). Don't ground either pole: that defeats the isolation monitor and is a shock path.
-- **Measuring the output without breaking HVIL:**
-  - On our bench the HVIL loop is closed at LV pins 7↔8, so the HV output connector can be probed without touching HVIL [ANALYSIS: the run-1/3 closes happened with HVIL bridged on the LV side].
-  - If your HVIL chain also runs through the HV connector (an HVIL bridge in the mating plug), use a **mating plug or adaptor** that keeps that bridge, and take your probe leads off its HV pins.
-  - Don't pull the HV plug to get access: that opens HVIL, which **mutes the pack**, so nothing will close.
-  - Fit the meter **before** 12 V goes on. Use a CAT III 600 V or better meter with insulated clip leads, and don't touch anything during the close window.
-- **Load and capacitor:**
-  - Runs 1 and 3 had **nothing** on the output. Precharge still completed (state 5 → 6 in 1.86 s) and no precharge DTC set [CONFIRMED SP51].
-  - The ≈220 V pulse decays with τ ≈ 45 ms (§7), and the output falls to 0 V within about 55 ms of opening [CONFIRMED SP51 0x112 b7].
-  - Recommended for the next test [ANALYSIS, engineering advice]: add a **small DC-link capacitor** (100–470 µF, at least 500 V DC rating) with a **permanent bleed resistor across it** (for example 100 kΩ, 3 W: 1.4 W at 380 V; τ = 22 s with 220 µF, so 5τ ≈ 2 min). This gives a realistic precharge and proves the voltage reading.
-  - **With a capacitor fitted, the output stays charged after the contactors open.** The pack doesn't discharge your capacitor. Wait 5τ and **measure 0 V** before touching it.
-  - Don't fit a capacitor much larger than an inverter's (a few hundred µF to about 1 mF). The pack's precharge resistor and timeout are sized for that [HYPOTHESIS].
-- **Abort:**
-  - Stop the frames, or send 0x10B OPEN. The pack opens within about 80 ms [CONFIRMED SP51].
-  - Removing 12 V also drops the contactors, which are coil-driven. That is a hard abort, but it may log DTCs and stress the contacts under load.
-  - With no load there is no current to interrupt.
-
----
-
-## 3. Power-up and settle
+## 2. Power-up and settle
 
 | Step | Time | Why |
 |---|---|---|
@@ -119,7 +97,7 @@ cansend can0 10B#CD01FC                    # single test frame (0x10B OPEN, aliv
 | First 0x112 | +0.11–0.12 s after our first frame | [CONFIRMED SP51 runs 1, 3, wake-window seg 6] |
 | Keep frames running | the whole session | Once the pack has sent 0x112, a **silent bus of ~2 s** latched COM off (v6 run 1: app TX stopped 1.2–1.76 s after our last frame and never came back) [CONFIRMED]. 0.16 s loop gaps were fine (loop 3) [CONFIRMED]. The owner's ~5 min idle before the refused wake is consistent. The earlier '≤ 32 s recovers' note is **withdrawn**: that case never had 0x112 before the silence. |
 
-## 3a. CAN wake vs LV wake
+## 3. CAN wake vs LV wake
 
 **LV-awake** = 12 V + 30C present, SME draws ~200 mA and **answers UDS**. **CAN-awake** = the SME runs its application COM: it **sends** 0x112/0x1FA/… and **receives** 0x10B/0x1A1/…. You need both. LV-awake alone has been seen in three forms:
 
