@@ -1,0 +1,508 @@
+VERSION "SP51_2026-11-03"
+
+NS_ :
+    CM_
+    BA_DEF_
+    BA_
+    VAL_
+    BA_DEF_DEF_
+
+BS_:
+
+BU_: SME VCU TESTER
+
+BO_ 274 SME_HV_Status_112: 8 SME
+ SG_ I_Pack : 0|16@1+ (0.1,-819.2) [-819.2|5734.3] "A" VCU,TESTER
+ SG_ U_Pack : 16|16@1+ (0.1,0) [0|6553.5] "V" VCU,TESTER
+ SG_ SME112_B4 : 32|8@1+ (1,0) [0|255] "" VCU,TESTER
+ SG_ SME112_B5_lo : 40|6@1+ (1,0) [0|63] "" VCU,TESTER
+ SG_ OpenContactorReq : 46|2@1+ (1,0) [0|3] "" VCU,TESTER
+ SG_ OpenInstantReq : 48|2@1+ (1,0) [0|3] "" VCU,TESTER
+ SG_ OpenFastReq : 50|2@1+ (1,0) [0|3] "" VCU,TESTER
+ SG_ SME112_B6_hi : 52|4@1+ (1,0) [0|15] "" VCU,TESTER
+ SG_ U_Link_Est : 56|8@1+ (4,0) [0|1020] "V" VCU,TESTER
+
+BO_ 506 SME_HV_State_1FA: 8 SME
+ SG_ IsoErrExt : 0|2@1+ (1,0) [0|3] "" VCU,TESTER
+ SG_ IsoErrInt : 2|2@1+ (1,0) [0|3] "" VCU,TESTER
+ SG_ CoolReq : 4|2@1+ (1,0) [0|3] "" VCU,TESTER
+ SG_ CoolValve : 6|2@1+ (1,0) [0|3] "" VCU,TESTER
+ SG_ LockErr : 8|2@1+ (1,0) [0|3] "" VCU,TESTER
+ SG_ PrechargeLocked : 10|2@1+ (1,0) [0|3] "" VCU,TESTER
+ SG_ HV_State : 12|4@1+ (1,0) [0|15] "" VCU,TESTER
+ SG_ SvcReq : 16|2@1+ (1,0) [0|3] "" VCU,TESTER
+ SG_ EmergErr : 18|2@1+ (1,0) [0|3] "" VCU,TESTER
+ SG_ DisconnectErr : 20|2@1+ (1,0) [0|3] "" VCU,TESTER
+ SG_ IsoWarn : 22|2@1+ (1,0) [0|3] "" VCU,TESTER
+ SG_ SME1FA_B3 : 24|8@1+ (1,0) [0|255] "" VCU,TESTER
+ SG_ T_HV : 32|8@1+ (1,-50) [-50|205] "degC" VCU,TESTER
+ SG_ SME1FA_B5 : 40|8@1+ (1,0) [0|255] "" VCU,TESTER
+ SG_ T_CellMin : 48|8@1+ (1,-50) [-50|205] "degC" VCU,TESTER
+ SG_ T_CellMax : 56|8@1+ (1,-50) [-50|205] "degC" VCU,TESTER
+
+BO_ 757 SME_Limits_2F5: 8 SME
+ SG_ U_ChargeMax : 0|16@1+ (0.1,0) [0|6553.5] "V" VCU,TESTER
+ SG_ I_ChargeMax : 16|16@1+ (0.1,-819.2) [-819.2|5734.3] "A" VCU,TESTER
+ SG_ U_DischargeMin : 32|16@1+ (0.1,0) [0|6553.5] "V" VCU,TESTER
+ SG_ I_DischargeMax : 48|16@1+ (0.1,0) [0|6553.5] "A" VCU,TESTER
+
+BO_ 569 SME_Energy_239: 8 SME
+ SG_ SME239_B0 : 0|8@1+ (1,0) [0|255] "" VCU,TESTER
+ SG_ E_Pred : 8|16@1+ (1,0) [0|65535] "Wh" VCU,TESTER
+ SG_ E_ChargeTarget : 24|16@1+ (0.02,0) [0|1310.7] "kWh" VCU,TESTER
+ SG_ SME239_B5 : 40|8@1+ (1,0) [0|255] "" VCU,TESTER
+ SG_ SME239_B6 : 48|8@1+ (1,0) [0|255] "" VCU,TESTER
+ SG_ SME239_B7 : 56|8@1+ (1,0) [0|255] "" VCU,TESTER
+
+BO_ 1037 SME_Gen5_40D: 8 SME
+ SG_ P_Avail_Chg_ShortTerm : 0|16@1+ (3,0) [0|196605] "W" VCU,TESTER
+ SG_ P_Avail_Dchg_ShortTerm : 16|16@1+ (3,0) [0|196605] "W" VCU,TESTER
+ SG_ P_Avail_Chg_LongTerm : 32|16@1+ (3,0) [0|196605] "W" VCU,TESTER
+ SG_ P_Avail_Dchg_LongTerm : 48|16@1+ (3,0) [0|196605] "W" VCU,TESTER
+
+BO_ 1072 SME_PredVoltage_430: 8 SME
+ SG_ U_Pred_ChgShort : 0|16@1+ (0.1,0) [0|6553.5] "V" VCU,TESTER
+ SG_ U_Pred_DisShort : 16|16@1+ (0.1,0) [0|6553.5] "V" VCU,TESTER
+ SG_ U_Pred_ChgLong : 32|16@1+ (0.1,0) [0|6553.5] "V" VCU,TESTER
+ SG_ U_Pred_DisLong : 48|16@1+ (0.1,0) [0|6553.5] "V" VCU,TESTER
+
+BO_ 1073 SME_Energy2_431: 8 SME
+ SG_ SME431_B0 : 0|8@1+ (1,0) [0|255] "" VCU,TESTER
+ SG_ SME431_B1 : 8|8@1+ (1,0) [0|255] "" VCU,TESTER
+ SG_ T_ChargePred : 16|16@1+ (1,0) [0|65535] "min" VCU,TESTER
+ SG_ SME431_B4 : 32|8@1+ (1,0) [0|255] "" VCU,TESTER
+ SG_ SME431_B5 : 40|8@1+ (1,0) [0|255] "" VCU,TESTER
+ SG_ SME431_B6 : 48|8@1+ (1,0) [0|255] "" VCU,TESTER
+ SG_ SME431_B7 : 56|8@1+ (1,0) [0|255] "" VCU,TESTER
+
+BO_ 1074 SME_OpMode_432: 8 SME
+ SG_ OpModeReq : 0|2@1+ (1,0) [0|3] "" VCU,TESTER
+ SG_ SME432_B0_b2 : 2|2@1+ (1,0) [0|3] "" VCU,TESTER
+ SG_ U_TargetCV : 4|12@1+ (0.1,0) [0|409.5] "V" VCU,TESTER
+ SG_ ChgCondMin : 16|8@1+ (0.5,0) [0|127.5] "" VCU,TESTER
+ SG_ ChgCondMax : 24|8@1+ (0.5,0) [0|127.5] "" VCU,TESTER
+ SG_ SOC_Display : 32|8@1+ (1,0) [0|255] "%" VCU,TESTER
+ SG_ SME432_B5 : 40|8@1+ (1,0) [0|255] "" VCU,TESTER
+ SG_ SME432_B6 : 48|8@1+ (1,0) [0|255] "" VCU,TESTER
+ SG_ SME432_B7 : 56|8@1+ (1,0) [0|255] "" VCU,TESTER
+
+BO_ 661 SME_Alive_295: 8 SME
+ SG_ CRC_295 : 0|8@1+ (1,0) [0|255] "" VCU,TESTER
+ SG_ Alive_295 : 8|4@1+ (1,0) [0|15] "" VCU,TESTER
+ SG_ SME295_B1_hi : 12|4@1+ (1,0) [0|15] "" VCU,TESTER
+ SG_ SME295_B2 : 16|8@1+ (1,0) [0|255] "" VCU,TESTER
+ SG_ SME295_B3 : 24|8@1+ (1,0) [0|255] "" VCU,TESTER
+ SG_ SME295_B4 : 32|8@1+ (1,0) [0|255] "" VCU,TESTER
+ SG_ SME295_B5 : 40|8@1+ (1,0) [0|255] "" VCU,TESTER
+ SG_ SME295_B6 : 48|8@1+ (1,0) [0|255] "" VCU,TESTER
+ SG_ SME295_B7 : 56|8@1+ (1,0) [0|255] "" VCU,TESTER
+
+BO_ 677 SME_Gen5_2A5: 8 SME
+ SG_ SME2A5_B0 : 0|8@1+ (1,0) [0|255] "" VCU,TESTER
+ SG_ SME2A5_B1 : 8|8@1+ (1,0) [0|255] "" VCU,TESTER
+ SG_ SME2A5_B2 : 16|8@1+ (1,0) [0|255] "" VCU,TESTER
+ SG_ SME2A5_B3 : 24|8@1+ (1,0) [0|255] "" VCU,TESTER
+ SG_ SME2A5_B4 : 32|8@1+ (1,0) [0|255] "" VCU,TESTER
+ SG_ SME2A5_B5 : 40|8@1+ (1,0) [0|255] "" VCU,TESTER
+ SG_ SME2A5_B6 : 48|8@1+ (1,0) [0|255] "" VCU,TESTER
+ SG_ SME2A5_B7 : 56|8@1+ (1,0) [0|255] "" VCU,TESTER
+
+BO_ 1059 SME_ClosedOnly_423: 8 SME
+ SG_ SME423_B0 : 0|8@1+ (1,0) [0|255] "" VCU,TESTER
+ SG_ SME423_B1 : 8|8@1+ (1,0) [0|255] "" VCU,TESTER
+ SG_ SME423_B2 : 16|8@1+ (1,0) [0|255] "" VCU,TESTER
+ SG_ SME423_B3 : 24|8@1+ (1,0) [0|255] "" VCU,TESTER
+ SG_ SME423_B4 : 32|8@1+ (1,0) [0|255] "" VCU,TESTER
+ SG_ SME423_B5 : 40|8@1+ (1,0) [0|255] "" VCU,TESTER
+ SG_ SME423_B6 : 48|8@1+ (1,0) [0|255] "" VCU,TESTER
+ SG_ SME423_B7 : 56|8@1+ (1,0) [0|255] "" VCU,TESTER
+
+BO_ 1197 SME_Gen5_4AD: 8 SME
+ SG_ SME4AD_B0 : 0|8@1+ (1,0) [0|255] "" VCU,TESTER
+ SG_ SME4AD_B1 : 8|8@1+ (1,0) [0|255] "" VCU,TESTER
+ SG_ SME4AD_B2 : 16|8@1+ (1,0) [0|255] "" VCU,TESTER
+ SG_ SME4AD_B3 : 24|8@1+ (1,0) [0|255] "" VCU,TESTER
+ SG_ SME4AD_B4 : 32|8@1+ (1,0) [0|255] "" VCU,TESTER
+ SG_ SME4AD_B5 : 40|8@1+ (1,0) [0|255] "" VCU,TESTER
+ SG_ SME4AD_B6 : 48|8@1+ (1,0) [0|255] "" VCU,TESTER
+ SG_ SME4AD_B7 : 56|8@1+ (1,0) [0|255] "" VCU,TESTER
+
+BO_ 1200 SME_Gen5_4B0: 8 SME
+ SG_ SME4B0_B0 : 0|8@1+ (1,0) [0|255] "" VCU,TESTER
+ SG_ SME4B0_B1 : 8|8@1+ (1,0) [0|255] "" VCU,TESTER
+ SG_ SME4B0_B2 : 16|8@1+ (1,0) [0|255] "" VCU,TESTER
+ SG_ SME4B0_B3 : 24|8@1+ (1,0) [0|255] "" VCU,TESTER
+ SG_ SME4B0_B4 : 32|8@1+ (1,0) [0|255] "" VCU,TESTER
+ SG_ SME4B0_B5 : 40|8@1+ (1,0) [0|255] "" VCU,TESTER
+ SG_ SME4B0_B6 : 48|8@1+ (1,0) [0|255] "" VCU,TESTER
+ SG_ SME4B0_B7 : 56|8@1+ (1,0) [0|255] "" VCU,TESTER
+
+BO_ 1415 SME_Service_587: 8 SME
+ SG_ Mux_587 M : 0|8@1+ (1,0) [0|255] "" VCU,TESTER
+ SG_ Evt06_Value m6 : 8|16@1+ (1,0) [0|65535] "" VCU,TESTER
+ SG_ Evt06_Rest m6 : 24|32@1+ (1,0) [0|4294967295] "" VCU,TESTER
+ SG_ Mux01_Data m1 : 8|56@1+ (1,0) [0|72057594037927936] "" VCU,TESTER
+ SG_ A2_Data m162 : 8|56@1+ (1,0) [0|72057594037927936] "" VCU,TESTER
+
+BO_ 303 VCU_KL_12F: 8 VCU
+ SG_ CRC_12F : 0|8@1+ (1,0) [0|255] "" SME
+ SG_ Alive_12F : 8|4@1+ (1,0) [0|15] "" SME
+ SG_ KL12F_B1_hi : 12|4@1+ (1,0) [0|15] "" SME
+ SG_ ST_KL : 16|4@1+ (1,0) [0|15] "" SME
+ SG_ KL12F_B2_hi : 20|4@1+ (1,0) [0|15] "" SME
+ SG_ KL12F_B3 : 24|8@1+ (1,0) [0|255] "" SME
+ SG_ KL12F_B4 : 32|8@1+ (1,0) [0|255] "" SME
+ SG_ KL12F_B5 : 40|8@1+ (1,0) [0|255] "" SME
+ SG_ KL12F_B6 : 48|8@1+ (1,0) [0|255] "" SME
+ SG_ KL12F_B7 : 56|8@1+ (1,0) [0|255] "" SME
+
+BO_ 267 VCU_ContactorCmd_10B: 3 VCU
+ SG_ CRC_10B : 0|8@1+ (1,0) [0|255] "" SME
+ SG_ Alive_10B : 8|4@1+ (1,0) [0|15] "" SME
+ SG_ ContactorCmd : 12|4@1+ (1,0) [0|15] "" SME
+ SG_ Const_10B : 16|8@1+ (1,0) [0|255] "" SME
+
+BO_ 1338 VCU_HVReq_53A: 8 VCU
+ SG_ HV53A_B0 : 0|8@1+ (1,0) [0|255] "" SME
+ SG_ HV53A_B1 : 8|8@1+ (1,0) [0|255] "" SME
+ SG_ HV53A_B2 : 16|8@1+ (1,0) [0|255] "" SME
+ SG_ HV53A_B3 : 24|8@1+ (1,0) [0|255] "" SME
+ SG_ HV53A_B4 : 32|8@1+ (1,0) [0|255] "" SME
+ SG_ HVReq_B5 : 40|8@1+ (1,0) [0|255] "" SME
+ SG_ HVReq_B6 : 48|8@1+ (1,0) [0|255] "" SME
+ SG_ HV53A_B7 : 56|8@1+ (1,0) [0|255] "" SME
+
+BO_ 417 VCU_V_VEH_1A1: 5 VCU
+ SG_ CRC_1A1 : 0|8@1+ (1,0) [0|255] "" SME
+ SG_ Alive_1A1 : 8|4@1+ (1,0) [0|15] "" SME
+ SG_ V_VEH_B1_hi : 12|4@1+ (1,0) [0|15] "" SME
+ SG_ V_VEH_Raw : 16|16@1+ (1,0) [0|65535] "" SME
+ SG_ V_VEH_B4 : 32|8@1+ (1,0) [0|255] "" SME
+
+BO_ 816 VCU_KILOMETERSTAND_330: 8 VCU
+ SG_ Mileage_km : 0|24@1+ (1,0) [0|16777215] "km" SME
+ SG_ KM330_B3 : 24|8@1+ (1,0) [0|255] "" SME
+ SG_ KM330_B4 : 32|8@1+ (1,0) [0|255] "" SME
+ SG_ KM330_B5 : 40|8@1+ (1,0) [0|255] "" SME
+ SG_ KM330_B6 : 48|8@1+ (1,0) [0|255] "" SME
+ SG_ KM330_B7 : 56|8@1+ (1,0) [0|255] "" SME
+
+BO_ 808 VCU_RELATIVZEIT_328: 6 VCU
+ SG_ RelTime_s : 0|32@1+ (1,0) [0|4294967295] "s" SME
+ SG_ RelTime_days : 32|16@1+ (1,0) [0|65535] "d" SME
+
+BO_ 714 VCU_A_TEMP_2CA: 2 VCU
+ SG_ ATEMP_B0 : 0|8@1+ (1,0) [0|255] "" SME
+ SG_ ATEMP_B1 : 8|8@1+ (1,0) [0|255] "" SME
+
+BO_ 928 VCU_FZZSTD_3A0: 8 VCU
+ SG_ FZZ_B0 : 0|8@1+ (1,0) [0|255] "" SME
+ SG_ FZZ_B1 : 8|8@1+ (1,0) [0|255] "" SME
+ SG_ FZZ_B2 : 16|8@1+ (1,0) [0|255] "" SME
+ SG_ FZZ_B3 : 24|8@1+ (1,0) [0|255] "" SME
+ SG_ FZZ_B4 : 32|8@1+ (1,0) [0|255] "" SME
+ SG_ FZZ_B5 : 40|8@1+ (1,0) [0|255] "" SME
+ SG_ FZZ_B6 : 48|8@1+ (1,0) [0|255] "" SME
+ SG_ FZZ_B7 : 56|8@1+ (1,0) [0|255] "" SME
+
+BO_ 970 VCU_FRC_RD_INFO_3CA: 8 VCU
+ SG_ FRC_B0 : 0|8@1+ (1,0) [0|255] "" SME
+ SG_ FRC_B1 : 8|8@1+ (1,0) [0|255] "" SME
+ SG_ FRC_B2 : 16|8@1+ (1,0) [0|255] "" SME
+ SG_ FRC_B3 : 24|8@1+ (1,0) [0|255] "" SME
+ SG_ FRC_B4 : 32|8@1+ (1,0) [0|255] "" SME
+ SG_ FRC_B5 : 40|8@1+ (1,0) [0|255] "" SME
+ SG_ FRC_B6 : 48|8@1+ (1,0) [0|255] "" SME
+ SG_ FRC_B7 : 56|8@1+ (1,0) [0|255] "" SME
+
+BO_ 1000 VCU_DIAG_OBD_3E8: 2 VCU
+ SG_ OBD3E8_B0 : 0|8@1+ (1,0) [0|255] "" SME
+ SG_ OBD3E8_B1 : 8|8@1+ (1,0) [0|255] "" SME
+
+BO_ 1296 VCU_NM_510: 8 VCU
+ SG_ NM510_B0 : 0|8@1+ (1,0) [0|255] "" SME
+ SG_ NM510_B1 : 8|8@1+ (1,0) [0|255] "" SME
+ SG_ NM510_B2 : 16|8@1+ (1,0) [0|255] "" SME
+ SG_ NM510_B3 : 24|8@1+ (1,0) [0|255] "" SME
+ SG_ NM510_B4 : 32|8@1+ (1,0) [0|255] "" SME
+ SG_ NM510_B5 : 40|8@1+ (1,0) [0|255] "" SME
+ SG_ NM510_B6 : 48|8@1+ (1,0) [0|255] "" SME
+ SG_ NM510_B7 : 56|8@1+ (1,0) [0|255] "" SME
+
+BO_ 1298 VCU_NM_512: 8 VCU
+ SG_ NM512_B0 : 0|8@1+ (1,0) [0|255] "" SME
+ SG_ NM512_B1 : 8|8@1+ (1,0) [0|255] "" SME
+ SG_ NM512_B2 : 16|8@1+ (1,0) [0|255] "" SME
+ SG_ NM512_B3 : 24|8@1+ (1,0) [0|255] "" SME
+ SG_ NM512_B4 : 32|8@1+ (1,0) [0|255] "" SME
+ SG_ NM512_B5 : 40|8@1+ (1,0) [0|255] "" SME
+ SG_ NM512_B6 : 48|8@1+ (1,0) [0|255] "" SME
+ SG_ NM512_B7 : 56|8@1+ (1,0) [0|255] "" SME
+
+BO_ 1777 TESTER_UDS_Req_6F1: 8 TESTER
+ SG_ UDS_TargetAddr : 0|8@1+ (1,0) [0|255] "" SME
+ SG_ UDS_PCI : 8|8@1+ (1,0) [0|255] "" SME
+ SG_ UDS_Data : 16|48@1+ (1,0) [0|281474976710655] "" SME
+
+BO_ 1543 SME_UDS_Rsp_607: 8 SME
+ SG_ UDS_SourceAddr : 0|8@1+ (1,0) [0|255] "" VCU,TESTER
+ SG_ UDS_PCI : 8|8@1+ (1,0) [0|255] "" VCU,TESTER
+ SG_ UDS_Data : 16|48@1+ (1,0) [0|281474976710655] "" VCU,TESTER
+
+CM_ "SP51 Gen5 PHEV pack (Preh EA443 AS4 SME, SWFL 00003e6f) K-CAN5 500k classic. Built 2026-11-03 from bench logs + AS4 firmware + F11 logs; BE = Battery-Emulator public map. Labels: [CONFIRMED] [ANALYSIS] [HYPOTHESIS] [FALLBACK]. No VIN/keys.";
+CM_ BU_ SME "Preh EA443 storage management electronics (battery ECU)";
+CM_ BU_ VCU "Vehicle side as emulated by bench playback / ZombieVerter (EME role)";
+CM_ BU_ TESTER "UDS tester, read-only services only";
+CM_ SG_ 274 I_Pack "[CONFIRMED SP51] pack current, (raw-8192)*0.1; ~-0.1 A at rest";
+CM_ SG_ 274 U_Pack "[CONFIRMED SP51] pack (pre-contactor) voltage; 380.8 V; matches E554 cell sum";
+CM_ SG_ 274 SME112_B4 "[ANALYSIS] raw byte (FF at rest)";
+CM_ SG_ 274 SME112_B5_lo "[ANALYSIS] raw bits";
+CM_ SG_ 274 OpenContactorReq "[FALLBACK BE] 2-bit enum 0 no_statement 1 not_active 2 active 3 invalid; stayed 1 throughout close holds [CONFIRMED SP51 value]";
+CM_ SG_ 274 OpenInstantReq "[FALLBACK BE] instant-open request enum; 1 = not_active observed";
+CM_ SG_ 274 OpenFastReq "[FALLBACK BE] fast-open request enum; 1 = not_active observed";
+CM_ SG_ 274 SME112_B6_hi "[ANALYSIS] raw nibble (7)";
+CM_ SG_ 274 U_Link_Est "[ANALYSIS] link/post-contactor voltage ~4 V/bit: 0 open, 0x5F=380 V closed, decays <80 ms on open (no cap); voltmeter confirmation pending";
+CM_ BO_ 274 "SME HV status: pack I/V, open requests, link voltage. 20 ms [CONFIRMED SP51]. Starts ~110 ms after vehicle frames appear, only with HVIL closed [CONFIRMED SP51 runs 1-3].";
+CM_ SG_ 506 IsoErrExt "[FALLBACK BE] enum; 1 not_active observed";
+CM_ SG_ 506 IsoErrInt "[FALLBACK BE] enum; 1 not_active observed";
+CM_ SG_ 506 CoolReq "[FALLBACK BE] cooling request enum";
+CM_ SG_ 506 CoolValve "[FALLBACK BE] cooling valve enum";
+CM_ SG_ 506 LockErr "[FALLBACK BE] interlock/locking error enum; 1 not_active observed";
+CM_ SG_ 506 PrechargeLocked "[FALLBACK BE] precharge locked enum; 1 not_active observed";
+CM_ SG_ 506 HV_State "[CONFIRMED SP51 runs 1+3] contactor state 4 OPEN, 5 PRECHARGE/closing, 6 CLOSED (close ack / HV ready). BE reads b1[5:4] as disconnect_sw 0/1/2";
+CM_ SG_ 506 SvcReq "[FALLBACK BE] service request enum";
+CM_ SG_ 506 EmergErr "[FALLBACK BE] emergency error enum";
+CM_ SG_ 506 DisconnectErr "[FALLBACK BE] disconnect error enum";
+CM_ SG_ 506 IsoWarn "[FALLBACK BE] isolation warning enum";
+CM_ SG_ 506 SME1FA_B3 "[ANALYSIS] raw byte (7F)";
+CM_ SG_ 506 T_HV "[FALLBACK BE] HV temperature, raw-50";
+CM_ SG_ 506 SME1FA_B5 "[ANALYSIS] raw byte (FF)";
+CM_ SG_ 506 T_CellMin "[ANALYSIS] min cell temp raw-50; 7 C matches DID DDC0 7.6 C";
+CM_ SG_ 506 T_CellMax "[ANALYSIS] max cell temp raw-50; 8 C matches DID DDC0 8.7 C";
+CM_ BO_ 506 "SME HV state / isolation / temps. 1000 ms cyclic + event on change to CLOSED [CONFIRMED SP51].";
+CM_ SG_ 757 U_ChargeMax "[FALLBACK BE layout; ANALYSIS value] 453.1 V, matches DID E54C";
+CM_ SG_ 757 I_ChargeMax "[FALLBACK BE layout+offset; ANALYSIS value] max charge current; 202.0-204.4 A observed (~7 C, 19 % SOC); 380 V x 202 A ~ 77 kW vs 0x40D 70 kW";
+CM_ SG_ 757 U_DischargeMin "[FALLBACK BE layout; ANALYSIS value] 303.0 V, matches DID E54C";
+CM_ SG_ 757 I_DischargeMax "[ANALYSIS] max discharge current 297.2 A (raw*0.1, NO offset); BE subtracts 819.2 which gives an impossible -522 A; 297 A x ~336 V ~ 100 kW matches 0x40D";
+CM_ BO_ 757 "SME charge/discharge voltage+current limits. AS4 vehicle TX PDU idx 5 [CONFIRMED AS4]; 60-100 ms observed [CONFIRMED SP51]; layout [FALLBACK BE]. Unchanged by contactor close (no load).";
+CM_ SG_ 569 SME239_B0 "[ANALYSIS] raw byte (00 then 31 after ~1 s)";
+CM_ SG_ 569 E_Pred "[FALLBACK BE] predicted energy";
+CM_ SG_ 569 E_ChargeTarget "[FALLBACK BE] predicted charge target";
+CM_ SG_ 569 SME239_B5 "[ANALYSIS] raw";
+CM_ SG_ 569 SME239_B6 "[ANALYSIS] raw";
+CM_ SG_ 569 SME239_B7 "[ANALYSIS] raw";
+CM_ BO_ 569 "SME predicted energy [FALLBACK BE]. One-frame change at main close (b1,b3) [ANALYSIS switching marker].";
+CM_ SG_ 1037 P_Avail_Chg_ShortTerm "[FALLBACK BE layout; ANALYSIS plausibility] short-term charge power; 69.5-70.3 kW observed at ~7 C/19 % SOC, creeps up ~0.2 kW per 46 s rest";
+CM_ SG_ 1037 P_Avail_Dchg_ShortTerm "[FALLBACK BE layout; ANALYSIS] short-term discharge power; 85.3-86.0 kW; low byte jitters +-0x10 every frame";
+CM_ SG_ 1037 P_Avail_Chg_LongTerm "[FALLBACK BE layout; ANALYSIS] long-term charge power; 46.2-46.7 kW";
+CM_ SG_ 1037 P_Avail_Dchg_LongTerm "[FALLBACK BE layout; HYPOTHESIS assignment] long-term discharge power; 99.8-100.1 kW (> short-term discharge, so st/lt assignment of this word is doubtful)";
+CM_ BO_ 1037 "SME available power (charge/discharge, short/long term). In AS4 vehicle TX PDU table idx 9 [CONFIRMED AS4]; ~50 ms on SP51 [CONFIRMED SP51]. Layout+scale from BE BEV path (u16 LE x3 W) [FALLBACK BE]; values 70/85/47/100 kW are self-consistent with 0x2F5 currents [ANALYSIS]. b6 jumps ~+0.18 kW for 3 frames at main close.";
+CM_ SG_ 1072 U_Pred_ChgShort "[FALLBACK BE] (414.3 V seen)";
+CM_ SG_ 1072 U_Pred_DisShort "[FALLBACK BE] (302.4 V seen)";
+CM_ SG_ 1072 U_Pred_ChgLong "[FALLBACK BE] FFFF at rest";
+CM_ SG_ 1072 U_Pred_DisLong "[FALLBACK BE] FFFF at rest";
+CM_ BO_ 1072 "SME predicted terminal voltages [FALLBACK BE]; 0xFFFF = n/a.";
+CM_ SG_ 1073 SME431_B0 "[FALLBACK BE] svc-disconnect / iso-meas / abort-charge bit fields (BE overlaps); F6->FE at ~5.7 s";
+CM_ SG_ 1073 SME431_B1 "[ANALYSIS] raw";
+CM_ SG_ 1073 T_ChargePred "[FALLBACK BE] predicted charge duration";
+CM_ SG_ 1073 SME431_B4 "[FALLBACK BE] time_end";
+CM_ SG_ 1073 SME431_B5 "[FALLBACK BE] energy_max low byte; A0->AF switching marker [ANALYSIS]";
+CM_ SG_ 1073 SME431_B6 "[FALLBACK BE] energy_max high nibble + flags";
+CM_ SG_ 1073 SME431_B7 "[ANALYSIS] raw";
+CM_ BO_ 1073 "SME energy content / iso / charge abort [FALLBACK BE]. b5 A0->AF for one frame at main close [ANALYSIS].";
+CM_ SG_ 1074 OpModeReq "[FALLBACK BE] op-mode request";
+CM_ SG_ 1074 SME432_B0_b2 "[ANALYSIS] raw bits";
+CM_ SG_ 1074 U_TargetCV "[FALLBACK BE] (b1<<4|b0>>4)/10";
+CM_ SG_ 1074 ChgCondMin "[FALLBACK BE] charge condition min";
+CM_ SG_ 1074 ChgCondMax "[FALLBACK BE] charge condition max";
+CM_ SG_ 1074 SOC_Display "[FALLBACK BE] display SOC (FF = invalid on bench)";
+CM_ SG_ 1074 SME432_B5 "[ANALYSIS] raw";
+CM_ SG_ 1074 SME432_B6 "[ANALYSIS] raw";
+CM_ SG_ 1074 SME432_B7 "[ANALYSIS] raw";
+CM_ BO_ 1074 "SME op-mode request / CV target / display SOC [FALLBACK BE]. b0 03->FB one frame at main close [ANALYSIS].";
+CM_ SG_ 661 CRC_295 "[CONFIRMED SP51] CRC8 J1850 poly 0x1D, init 0x45, over b1..b7, no final XOR";
+CM_ SG_ 661 Alive_295 "[CONFIRMED SP51] alive counter 0..14";
+CM_ SG_ 661 SME295_B1_hi "[CONFIRMED SP51] constant 5";
+CM_ SG_ 661 SME295_B2 "[ANALYSIS] raw byte, meaning unknown";
+CM_ SG_ 661 SME295_B3 "[ANALYSIS] raw byte, meaning unknown";
+CM_ SG_ 661 SME295_B4 "[ANALYSIS] raw byte, meaning unknown";
+CM_ SG_ 661 SME295_B5 "[ANALYSIS] raw byte, meaning unknown";
+CM_ SG_ 661 SME295_B6 "[ANALYSIS] raw byte, meaning unknown";
+CM_ SG_ 661 SME295_B7 "[ANALYSIS] raw byte, meaning unknown";
+CM_ BO_ 661 "SME alive/status, irregular ~100-1000 ms. CRC8 poly 0x1D init 0x45 over b1..b7 [CONFIRMED SP51].";
+CM_ SG_ 677 SME2A5_B0 "[ANALYSIS] raw byte, meaning unknown";
+CM_ SG_ 677 SME2A5_B1 "[ANALYSIS] raw byte, meaning unknown";
+CM_ SG_ 677 SME2A5_B2 "[ANALYSIS] raw byte, meaning unknown";
+CM_ SG_ 677 SME2A5_B3 "[ANALYSIS] raw byte, meaning unknown";
+CM_ SG_ 677 SME2A5_B4 "[ANALYSIS] raw byte, meaning unknown";
+CM_ SG_ 677 SME2A5_B5 "[ANALYSIS] raw byte, meaning unknown";
+CM_ SG_ 677 SME2A5_B6 "[ANALYSIS] raw byte, meaning unknown";
+CM_ SG_ 677 SME2A5_B7 "[ANALYSIS] raw byte, meaning unknown";
+CM_ BO_ 677 "SME 100 ms frame, static E4 33 FF.. on bench [CONFIRMED presence]; meaning unknown.";
+CM_ SG_ 1059 SME423_B0 "[ANALYSIS] raw byte, meaning unknown";
+CM_ SG_ 1059 SME423_B1 "[ANALYSIS] raw byte, meaning unknown";
+CM_ SG_ 1059 SME423_B2 "[ANALYSIS] raw byte, meaning unknown";
+CM_ SG_ 1059 SME423_B3 "[ANALYSIS] raw byte, meaning unknown";
+CM_ SG_ 1059 SME423_B4 "[ANALYSIS] raw byte, meaning unknown";
+CM_ SG_ 1059 SME423_B5 "[ANALYSIS] raw byte, meaning unknown";
+CM_ SG_ 1059 SME423_B6 "[ANALYSIS] raw byte, meaning unknown";
+CM_ SG_ 1059 SME423_B7 "[ANALYSIS] raw byte, meaning unknown";
+CM_ BO_ 1059 "Sent every 10 s ONLY while CLOSED: 14 04 00 00 00 00 00 00 [CONFIRMED SP51 runs 1+3]; meaning unknown.";
+CM_ SG_ 1197 SME4AD_B0 "[ANALYSIS] raw byte, meaning unknown";
+CM_ SG_ 1197 SME4AD_B1 "[ANALYSIS] raw byte, meaning unknown";
+CM_ SG_ 1197 SME4AD_B2 "[ANALYSIS] raw byte, meaning unknown";
+CM_ SG_ 1197 SME4AD_B3 "[ANALYSIS] raw byte, meaning unknown";
+CM_ SG_ 1197 SME4AD_B4 "[ANALYSIS] raw byte, meaning unknown";
+CM_ SG_ 1197 SME4AD_B5 "[ANALYSIS] raw byte, meaning unknown";
+CM_ SG_ 1197 SME4AD_B6 "[ANALYSIS] raw byte, meaning unknown";
+CM_ SG_ 1197 SME4AD_B7 "[ANALYSIS] raw byte, meaning unknown";
+CM_ BO_ 1197 "SME 1 s frame [CONFIRMED presence]; meaning unknown (b2 toggles 00/FE).";
+CM_ SG_ 1200 SME4B0_B0 "[ANALYSIS] raw byte, meaning unknown";
+CM_ SG_ 1200 SME4B0_B1 "[ANALYSIS] raw byte, meaning unknown";
+CM_ SG_ 1200 SME4B0_B2 "[ANALYSIS] raw byte, meaning unknown";
+CM_ SG_ 1200 SME4B0_B3 "[ANALYSIS] raw byte, meaning unknown";
+CM_ SG_ 1200 SME4B0_B4 "[ANALYSIS] raw byte, meaning unknown";
+CM_ SG_ 1200 SME4B0_B5 "[ANALYSIS] raw byte, meaning unknown";
+CM_ SG_ 1200 SME4B0_B6 "[ANALYSIS] raw byte, meaning unknown";
+CM_ SG_ 1200 SME4B0_B7 "[ANALYSIS] raw byte, meaning unknown";
+CM_ BO_ 1200 "SME 1 s frame paired with 0x4AD [CONFIRMED presence]; meaning unknown.";
+CM_ SG_ 1415 Mux_587 "[ANALYSIS] multiplexer byte";
+CM_ SG_ 1415 Evt06_Value "[HYPOTHESIS] 2500 (0x09C4) after close and open, 50 after open+2.4 s, then 0";
+CM_ SG_ 1415 Evt06_Rest "[CONFIRMED SP51] FF fill";
+CM_ SG_ 1415 Mux01_Data "[ANALYSIS] single frame 04 F1 FF.. seen when op-cycle resumed (run 3); meaning unknown";
+CM_ SG_ 1415 A2_Data "[ANALYSIS] start-up data block, meaning unknown";
+CM_ BO_ 1415 "SME service/event frame, multiplexed on b0. A2 = start-up burst (fresh wake), 06 = event after each contactor close/open, 01 = single frame on resumed op-cycle [ANALYSIS].";
+CM_ SG_ 303 CRC_12F "[CONFIRMED F11 1557/1557, tolerated by SP51] CRC8 poly 0x1D init 0x60 over b1..b7";
+CM_ SG_ 303 Alive_12F "[CONFIRMED F11] alive 0..14";
+CM_ SG_ 303 KL12F_B1_hi "[CONFIRMED F11] constant 2";
+CM_ SG_ 303 ST_KL "[ANALYSIS] terminal state, 0xA = KL15 on (byte2 0x8A)";
+CM_ SG_ 303 KL12F_B2_hi "[CONFIRMED playback] constant 8";
+CM_ SG_ 303 KL12F_B3 "[CONFIRMED playback] constant tail DD F1 05 30 01; meaning [FALLBACK]";
+CM_ SG_ 303 KL12F_B4 "[CONFIRMED playback] constant tail DD F1 05 30 01; meaning [FALLBACK]";
+CM_ SG_ 303 KL12F_B5 "[CONFIRMED playback] constant tail DD F1 05 30 01; meaning [FALLBACK]";
+CM_ SG_ 303 KL12F_B6 "[CONFIRMED playback] constant tail DD F1 05 30 01; meaning [FALLBACK]";
+CM_ SG_ 303 KL12F_B7 "[CONFIRMED playback] constant tail DD F1 05 30 01; meaning [FALLBACK]";
+CM_ BO_ 303 "Terminal status (KL15) F-series layout. Bench sends it; NOT in AS4 RX table (may be ignored) [CONFIRMED AS4 absence]. In car: CAS sends it - do not synthesise.";
+CM_ SG_ 267 CRC_10B "[FALLBACK BE init; CONFIRMED accepted by SP51] CRC8 poly 0x1D init 0x3F over b1..b2";
+CM_ SG_ 267 Alive_10B "[CONFIRMED SP51 accepted] alive 0..14, +1 per frame";
+CM_ SG_ 267 ContactorCmd "[CONFIRMED SP51] 0 = OPEN, 1 = CLOSE (v2 alt C/D untested)";
+CM_ SG_ 267 Const_10B "[FALLBACK BE] constant 0xFC";
+CM_ BO_ 267 "SPEC_DCSW_HVSTO (EME->SME contactor request). In AS4 RX grp0 [CONFIRMED AS4]. Close accepted on SP51 with hi nibble 1 [CONFIRMED SP51].";
+CM_ SG_ 1338 HV53A_B0 "[FALLBACK BE] constant 40 3A 04 00 00";
+CM_ SG_ 1338 HV53A_B1 "[FALLBACK BE] constant 40 3A 04 00 00";
+CM_ SG_ 1338 HV53A_B2 "[FALLBACK BE] constant 40 3A 04 00 00";
+CM_ SG_ 1338 HV53A_B3 "[FALLBACK BE] constant 40 3A 04 00 00";
+CM_ SG_ 1338 HV53A_B4 "[FALLBACK BE] constant 40 3A 04 00 00";
+CM_ SG_ 1338 HVReq_B5 "[FALLBACK BE] 0x00 A idle, 0x80 B close requested, 0x84 C/D";
+CM_ SG_ 1338 HVReq_B6 "[FALLBACK BE] 0x01 A/B/C, 0x00 D steady on";
+CM_ SG_ 1338 HV53A_B7 "[FALLBACK BE] constant 00";
+CM_ BO_ 1338 "EME HV request state, AS4 RX group 2 [CONFIRMED AS4]. States A 40 3A 04 00 00 00 01 00, B ..80 01.., C ..84 01.., D ..84 00.. [FALLBACK BE]; A->B->C->D worked on SP51 [CONFIRMED SP51].";
+CM_ SG_ 417 CRC_1A1 "[CONFIRMED F11 43829/43831] CRC8 poly 0x1D init 0x77 over b1..b4";
+CM_ SG_ 417 Alive_1A1 "[CONFIRMED F11] alive 0..14";
+CM_ SG_ 417 V_VEH_B1_hi "[CONFIRMED F11] constant 0xC";
+CM_ SG_ 417 V_VEH_Raw "[ANALYSIS F11] speed raw, 0 = standstill; scale unknown";
+CM_ SG_ 417 V_VEH_B4 "[CONFIRMED F11] 0x81 at standstill";
+CM_ BO_ 417 "V_VEH vehicle speed. In AS4 RX grp0 [CONFIRMED AS4]; clears CAD4B0 [CONFIRMED SP51]. In car: DSC sends - do not synthesise.";
+CM_ SG_ 816 Mileage_km "[ANALYSIS F11] odometer u24 LE (bench placeholder 100000)";
+CM_ SG_ 816 KM330_B3 "[CONFIRMED F11 bytes] tail 06 00 0D BD 07; meaning unknown";
+CM_ SG_ 816 KM330_B4 "[CONFIRMED F11 bytes] tail 06 00 0D BD 07; meaning unknown";
+CM_ SG_ 816 KM330_B5 "[CONFIRMED F11 bytes] tail 06 00 0D BD 07; meaning unknown";
+CM_ SG_ 816 KM330_B6 "[CONFIRMED F11 bytes] tail 06 00 0D BD 07; meaning unknown";
+CM_ SG_ 816 KM330_B7 "[CONFIRMED F11 bytes] tail 06 00 0D BD 07; meaning unknown";
+CM_ BO_ 816 "KILOMETERSTAND. AS4 RX grp0 [CONFIRMED AS4]; clears CAD558 [CONFIRMED SP51]. F11 sends event-driven; 1000 ms on bench [HYPOTHESIS]. In car: KOMBI sends - do not synthesise.";
+CM_ SG_ 808 RelTime_s "[FALLBACK BE] seconds counter, +1 per frame";
+CM_ SG_ 808 RelTime_days "[FALLBACK BE] day counter";
+CM_ BO_ 808 "RELATIVZEIT relative time. AS4 RX grp0 [CONFIRMED AS4]; layout [FALLBACK BE].";
+CM_ SG_ 714 ATEMP_B0 "[FALLBACK BE] static";
+CM_ SG_ 714 ATEMP_B1 "[FALLBACK BE] static";
+CM_ BO_ 714 "A_TEMP ambient temp; static 6E 6F [FALLBACK BE].";
+CM_ SG_ 928 FZZ_B0 "[FALLBACK BE] static";
+CM_ SG_ 928 FZZ_B1 "[FALLBACK BE] static";
+CM_ SG_ 928 FZZ_B2 "[FALLBACK BE] static";
+CM_ SG_ 928 FZZ_B3 "[FALLBACK BE] static";
+CM_ SG_ 928 FZZ_B4 "[FALLBACK BE] static";
+CM_ SG_ 928 FZZ_B5 "[FALLBACK BE] static";
+CM_ SG_ 928 FZZ_B6 "[FALLBACK BE] static";
+CM_ SG_ 928 FZZ_B7 "[FALLBACK BE] static";
+CM_ BO_ 928 "FZZSTD vehicle condition; static [FALLBACK BE].";
+CM_ SG_ 970 FRC_B0 "[FALLBACK BE] static";
+CM_ SG_ 970 FRC_B1 "[FALLBACK BE] static";
+CM_ SG_ 970 FRC_B2 "[FALLBACK BE] static";
+CM_ SG_ 970 FRC_B3 "[FALLBACK BE] static";
+CM_ SG_ 970 FRC_B4 "[FALLBACK BE] static";
+CM_ SG_ 970 FRC_B5 "[FALLBACK BE] static";
+CM_ SG_ 970 FRC_B6 "[FALLBACK BE] static";
+CM_ SG_ 970 FRC_B7 "[FALLBACK BE] static";
+CM_ BO_ 970 "FRC_RD_INFO; static [FALLBACK BE].";
+CM_ SG_ 1000 OBD3E8_B0 "[FALLBACK BE] static";
+CM_ SG_ 1000 OBD3E8_B1 "[FALLBACK BE] static";
+CM_ BO_ 1000 "DIAG_OBD_ENGMG_EL; static F1 FF [FALLBACK BE].";
+CM_ SG_ 1296 NM510_B0 "[CONFIRMED F11] static";
+CM_ SG_ 1296 NM510_B1 "[CONFIRMED F11] static";
+CM_ SG_ 1296 NM510_B2 "[CONFIRMED F11] static";
+CM_ SG_ 1296 NM510_B3 "[CONFIRMED F11] static";
+CM_ SG_ 1296 NM510_B4 "[CONFIRMED F11] static";
+CM_ SG_ 1296 NM510_B5 "[CONFIRMED F11] static";
+CM_ SG_ 1296 NM510_B6 "[CONFIRMED F11] static";
+CM_ SG_ 1296 NM510_B7 "[CONFIRMED F11] static";
+CM_ BO_ 1296 "NM keep-alive copied from F11 [CONFIRMED F11]; not in AS4 RX table; possible wake trigger [HYPOTHESIS].";
+CM_ SG_ 1298 NM512_B0 "[CONFIRMED F11] static";
+CM_ SG_ 1298 NM512_B1 "[CONFIRMED F11] static";
+CM_ SG_ 1298 NM512_B2 "[CONFIRMED F11] static";
+CM_ SG_ 1298 NM512_B3 "[CONFIRMED F11] static";
+CM_ SG_ 1298 NM512_B4 "[CONFIRMED F11] static";
+CM_ SG_ 1298 NM512_B5 "[CONFIRMED F11] static";
+CM_ SG_ 1298 NM512_B6 "[CONFIRMED F11] static";
+CM_ SG_ 1298 NM512_B7 "[CONFIRMED F11] static";
+CM_ BO_ 1298 "NM keep-alive copied from F11 [CONFIRMED F11]; not in AS4 RX table [CONFIRMED AS4].";
+CM_ SG_ 1777 UDS_TargetAddr "[CONFIRMED SP51] 0x07 = SME";
+CM_ SG_ 1777 UDS_PCI "[CONFIRMED] ISO-TP PCI: 0x0n SF len n, 0x30 FC CTS";
+CM_ SG_ 1777 UDS_Data "[CONFIRMED] raw payload bytes 2..7";
+CM_ BO_ 1777 "UDS request, BMW extended addressing: b0 = target 0x07 (SME), b1.. ISO-TP PCI + data [CONFIRMED SP51]. DLC varies 4-8: decode with allow_truncated.";
+CM_ SG_ 1543 UDS_SourceAddr "[CONFIRMED SP51] 0xF1 = tester";
+CM_ SG_ 1543 UDS_PCI "[CONFIRMED] ISO-TP PCI: 0x0n SF, 0x1n FF, 0x2n CF";
+CM_ SG_ 1543 UDS_Data "[CONFIRMED] raw payload bytes 2..7";
+CM_ BO_ 1543 "UDS response, b0 = tester address 0xF1 [CONFIRMED SP51]. DLC varies 4-8: decode with allow_truncated.";
+
+BA_DEF_ BO_ "GenMsgCycleTime" INT 0 65535;
+BA_DEF_DEF_ "GenMsgCycleTime" 0;
+BA_ "GenMsgCycleTime" BO_ 274 20;
+BA_ "GenMsgCycleTime" BO_ 506 1000;
+BA_ "GenMsgCycleTime" BO_ 757 100;
+BA_ "GenMsgCycleTime" BO_ 569 200;
+BA_ "GenMsgCycleTime" BO_ 1037 50;
+BA_ "GenMsgCycleTime" BO_ 1072 200;
+BA_ "GenMsgCycleTime" BO_ 1073 200;
+BA_ "GenMsgCycleTime" BO_ 1074 200;
+BA_ "GenMsgCycleTime" BO_ 661 345;
+BA_ "GenMsgCycleTime" BO_ 677 100;
+BA_ "GenMsgCycleTime" BO_ 1059 10000;
+BA_ "GenMsgCycleTime" BO_ 1197 1000;
+BA_ "GenMsgCycleTime" BO_ 1200 1000;
+BA_ "GenMsgCycleTime" BO_ 1415 0;
+BA_ "GenMsgCycleTime" BO_ 303 100;
+BA_ "GenMsgCycleTime" BO_ 267 20;
+BA_ "GenMsgCycleTime" BO_ 1338 200;
+BA_ "GenMsgCycleTime" BO_ 417 20;
+BA_ "GenMsgCycleTime" BO_ 816 1000;
+BA_ "GenMsgCycleTime" BO_ 808 1000;
+BA_ "GenMsgCycleTime" BO_ 714 1000;
+BA_ "GenMsgCycleTime" BO_ 928 1000;
+BA_ "GenMsgCycleTime" BO_ 970 1000;
+BA_ "GenMsgCycleTime" BO_ 1000 1000;
+BA_ "GenMsgCycleTime" BO_ 1296 1000;
+BA_ "GenMsgCycleTime" BO_ 1298 1000;
+BA_ "GenMsgCycleTime" BO_ 1777 0;
+BA_ "GenMsgCycleTime" BO_ 1543 0;
+
+VAL_ 506 HV_State 6 "CLOSED" 5 "PRECHARGE" 4 "OPEN" ;
+VAL_ 267 ContactorCmd 1 "CLOSE" 0 "OPEN" ;
+VAL_ 1338 HVReq_B5 132 "C_D" 128 "B_CLOSE_REQ" 0 "A_IDLE" ;
+VAL_ 1338 HVReq_B6 1 "A_B_C" 0 "D_STEADY" ;
+VAL_ 274 OpenContactorReq 3 "INVALID" 2 "ACTIVE" 1 "NOT_ACTIVE" 0 "NO_STATEMENT" ;
+VAL_ 274 OpenInstantReq 3 "INVALID" 2 "ACTIVE" 1 "NOT_ACTIVE" 0 "NO_STATEMENT" ;
+VAL_ 274 OpenFastReq 3 "INVALID" 2 "ACTIVE" 1 "NOT_ACTIVE" 0 "NO_STATEMENT" ;
+VAL_ 506 IsoErrExt 3 "INVALID" 2 "ACTIVE" 1 "NOT_ACTIVE" 0 "NO_STATEMENT" ;
+VAL_ 506 IsoErrInt 3 "INVALID" 2 "ACTIVE" 1 "NOT_ACTIVE" 0 "NO_STATEMENT" ;
+VAL_ 506 LockErr 3 "INVALID" 2 "ACTIVE" 1 "NOT_ACTIVE" 0 "NO_STATEMENT" ;
+VAL_ 506 PrechargeLocked 3 "INVALID" 2 "ACTIVE" 1 "NOT_ACTIVE" 0 "NO_STATEMENT" ;
