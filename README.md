@@ -1,5 +1,5 @@
 
-# SP51 Gen5 PHEV pack: how to make the contactors close (bench guide)
+# SP51 Gen5 BMW PHEV pack: how to make the contactors close
 
 <img width="4096" height="2304" alt="SP51_on" src="https://github.com/user-attachments/assets/58129079-2fe0-412a-9179-df68cd6ab25a" />
 
