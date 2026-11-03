@@ -1,7 +1,8 @@
 
 # SP51 Gen5 PHEV pack: how to make the contactors close (bench guide)
 
-<img width="2304" height="4096" alt="SP51_plate" src="https://github.com/user-attachments/assets/361c5a3d-8c9c-4262-ba01-c5d468c7d53f" />
+<img width="2304" height="4096" alt="SP51_plate" src="https://github.com/user-attachments/assets/ec4931dc-685e-4973-af20-065b7228a8b7" />
+
 
 
 **Pack:** BMW SP51 Gen5 PHEV HV battery, SME = Preh EA443 AS4 (SWFL 00003e6f), owned unit.
